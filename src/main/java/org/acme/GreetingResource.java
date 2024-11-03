@@ -14,13 +14,3 @@ public class GreetingResource {
         return "Hello RESTEasy";
     }
 }
-
-@Path("/health")
-class HealthResource {
-
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String health() {
-        return "Service is up";
-    }
-}
