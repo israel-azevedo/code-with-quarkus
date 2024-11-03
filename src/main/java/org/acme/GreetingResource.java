@@ -9,16 +9,18 @@ import jakarta.ws.rs.core.MediaType;
 public class GreetingResource {
 
     @GET
-    @Path("/hello")
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
         return "Hello RESTEasy";
     }
+}
+
+@Path("/health")
+class HealthResource {
 
     @GET
-    @Path("/health")
     @Produces(MediaType.TEXT_PLAIN)
     public String health() {
-        return "Healthy";
+        return "Service is up";
     }
 }
